@@ -24,6 +24,22 @@ interface Frontmatter {
 }
 
 
+// Add this function before your existing code
+export async function generateStaticParams() {
+  // Read all files in the blog content directory
+  const blogDirectory = path.join(process.cwd(), 'app/content/blog-content');
+  
+  // Get all .md files in the directory
+  const fileNames = fs.readdirSync(blogDirectory)
+    .filter(file => file.endsWith('.md'))
+    .map(file => file.replace(/\.md$/, ''));
+
+  // Return an array of objects with slug parameters
+  return fileNames.map((fileName) => ({
+    slug: fileName,
+  }));
+}
+
 
 
 // Generate metadata for each research post
@@ -58,12 +74,6 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     }
   };
 }
-
-
-
-
-
-
 
 
 export default async function BlogPost({ params }: { params: { slug: string } }) {
@@ -130,3 +140,5 @@ export default async function BlogPost({ params }: { params: { slug: string } })
     </div>
   );
 }
+
+export const dynamicParams = false;
