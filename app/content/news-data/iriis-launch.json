@@ -1,0 +1,14 @@
+{
+  "id": "iriis-launch",
+  "title": "IRIIS launch",
+  "intro": "We are excited to announce the official launch of the Institute for Research and Innovation in Intelligent Systems (IRIIS), a non-profit organization dedicated to advancing AI research.",
+  "author": "IRIIS",
+  "date": "05/08/2024",
+  "image": "/news/iriis-launch/iriis-first.jpg",
+  "content": [
+    {
+      "heading": "Introduction",
+      "body": "Welcome to the Institute for Research and Innovation in Intelligent Systems (IRIIS). We are a team of student researchers working to advance artificial intelligence in ways that benefit society. Our work combines careful research with real-world applications, always keeping in mind the importance of doing things the right way. We aim to tackle complex challenges in AI while ensuring our research benefits all. We invite researchers, practitioners, and enthusiasts to join our growing community as we work to shape the future of intelligent systems through open, ethical, and scientifically grounded approaches. We're excited about several upcoming projects and research papers that we're working on. In the coming months, we'll be announcing new partnerships, research findings, and opportunities for collaboration. We're particularly looking forward to sharing our work soon."
+     }
+  ]
+}
