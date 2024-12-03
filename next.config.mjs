@@ -8,8 +8,12 @@ const withMDX = mdx({
 });
 
 export default withMDX({
-  output: "export", // optional, for serverless or containerized environments
+  output: 'export',
   reactStrictMode: true,
   swcMinify: true,
-  pageExtensions: ['ts', 'tsx', 'md', 'mdx'], // Ensure Next.js recognizes .md and .mdx files as pages
+  pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
 });
