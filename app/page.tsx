@@ -20,23 +20,23 @@ export default function HomePage() {
           className="flex flex-col md:flex-row items-center justify-between gap-4"
         >
           {/* Text Content - Left Side */}
-          <div className="flex-2 max-w-4xl text-left">
-            <p className="text-4xl sm:text-6xl font-bold tracking-tight leading-tight">
+          <div className="flex-2 max-w-4xl">
+          <p className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-snug sm:leading-tight lg:text-left md:text-center sm:text-center">
               Institute for Research and Innovation in Intelligent Systems
             </p>
-            <p className="text-3xl py-8 max-w-4xl">
-              At IRIIS, we explore algorithms and mathematical foundations to help advance AI research. 
-              We&apos;re committed to the idea of open-source research and free knowledge sharing. 
-              We will publish all our findings openly and create learning resources that make AI more accessible. 
-              Though we&apos;re a small team, we believe great ideas can come from anywhere. 
-              And, we will always work to build a future where AI serves everyone positively.
-            </p>
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl py-4 sm:py-12 md:py-8 max-w-full md:max-w-2xl lg:max-w-4xl lg:text-left md:text-center sm:text-center">
+            At IRIIS, we explore algorithms and mathematical foundations to help advance AI research. 
+            We&apos;re committed to the idea of open-source research and free knowledge sharing. 
+            We will publish all our findings openly and create learning resources that make AI more accessible. 
+            Though we&apos;re a small team, we believe great ideas can come from anywhere. 
+            And, we will always work to build a future where AI serves everyone positively.
+          </p>
           </div>
           
 
           {/* Logo - Right Side */}
-          <div className="flex-2 flex justify-center md:justify-end">
-            <div className="relative w-96 h-96 overflow-hidden rounded-md group bg-background/50 border-foreground shadow-md hover:shadow-heavy">
+          <div className="flex flex-2 justify-center">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden rounded-md group bg-background/50 border border-foreground shadow-md hover:shadow-heavy justify-center">
               <Image
                 src={IRIISLogo}
                 alt="IRIIS Logo"
@@ -46,13 +46,14 @@ export default function HomePage() {
               />
             </div>
           </div>
+
           </div>
       </section>
 
 
       {/* News Section */}
       <section id="announcement" className="container mx-auto pb-80">
-      <h2 className="text-5xl font-bold mb-12 text-center pb-8 pt-4">News</h2>
+      <h2 className="mb-12 text-center pb-8 pt-4 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-snug sm:leading-tight">News</h2>
       
         <div className="p-6 rounded-2xl border-foreground hover:text-accent-foreground">
           <AnnouncementCard
