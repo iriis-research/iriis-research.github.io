@@ -86,7 +86,7 @@ export default function HomePage() {
                        font-bold 
                        text-center 
                        mb-8 sm:mb-12">
-          News
+          Announcements
         </h2>
         
         <div className="max-w-4xl mx-auto p-4 sm:p-6 
@@ -94,10 +94,10 @@ export default function HomePage() {
                         hover:text-accent-foreground">
           <AnnouncementCard
             category="News"
-            title="IRIIS Launch"
-            date="8th May, 2023"
-            info="Embark on a Journey with IRIIS: Empowering Learning, Research, and Accessibility in AI for Everyone."
-            newsUrl="/news/iriis-launch"
+            title="First paper accepted at CHiPSAL Workshop (COLING 2025)"
+            date="4th December, 2024"
+            info="We are thrilled to announce that our paper, 'Development of Pre-Trained Transformer-based Models for the Nepali Language,' has been accepted at @COLING2025!"
+            newsUrl="/news/coling-2025-paper"
           />
         </div>
       </section>

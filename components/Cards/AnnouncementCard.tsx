@@ -9,7 +9,6 @@ import {
 import { IoIosMore } from "react-icons/io";
 import { Button } from "@/components/ui/button" 
 
-
 interface NewsCardProps {
     category: string;
     title: string;
@@ -18,7 +17,7 @@ interface NewsCardProps {
     newsUrl: string;
 }
 
-function NewsCard({ 
+function AnnouncementCard({ 
     category, 
     title, 
     date,
@@ -26,38 +25,80 @@ function NewsCard({
     newsUrl
 }: NewsCardProps) {
     return (
-        <Card className=" max-w-screen-2xl overflow-hidden bg-gradient-to-r p-6 hover:shadow-heavy hover:border-foreground cursor-pointer">
-            <CardHeader className="p-0">
-                <p className="text-md font-bold">{category}</p>
+        <Card className="
+            w-full 
+            max-w-full 
+            overflow-hidden 
+            bg-gradient-to-r 
+            p-4 sm:p-6 
+            hover:shadow-lg
+            transition-all 
+            duration-300 
+            ease-in-out 
+            border 
+            hover:border-primary/50
+        ">
+            <CardHeader className="p-0 mb-2 sm:mb-4">
+                <p className="
+                    text-sm sm:text-base 
+                    font-semibold 
+                    text-primary/80
+                ">
+                    {category}
+                </p>
             </CardHeader>
-            <CardContent className="p-0 space-y-6">
-                <div className="space-y-4">
-                    <h2 className="text-3xl font-bold mt-4">{title}</h2>
-                    <p className="text-sm text-gray-600">{date}</p>
+            <CardContent className="p-0 space-y-4 sm:space-y-6">
+                <div className="space-y-2 sm:space-y-3">
+                    <h2 className="
+                        text-2xl sm:text-3xl md:text-4xl 
+                        font-bold 
+                        tracking-tight 
+                        line-clamp-2
+                    ">
+                        {title}
+                    </h2>
+                    <p className="
+                        text-xs sm:text-sm 
+                        text-foreground/60
+                    ">
+                        {date}
+                    </p>
                 </div>
                 
-                    <div className=" rounded-lg">
-                        <p className="text-xl font-medium pb-4">
-                            {info}
-                            </p>
-                        <Button 
+                <div className="space-y-4 sm:space-y-6">
+                    <p className="
+                        text-base sm:text-lg md:text-xl 
+                        font-medium 
+                        text-foreground/90 
+                        line-clamp-3
+                    ">
+                        {info}
+                    </p>
+                    <Button 
                         variant="outline" 
-                        className="flex-1 border-solid border-2 border-foreground"
-                        size='lg'
+                        className="
+                            w-full 
+                            flex 
+                            items-center 
+                            justify-center 
+                            gap-2 
+                            text-sm sm:text-base
+                            hover:border-foreground 
+                        "
                         asChild
-                            >
-                        <Link href={newsUrl}>
-                            <span className="flex items-center gap-2 text-xl">
-                                More
-                                <IoIosMore  size={36} />
-                                
-                            </span>
+                    >
+                        <Link 
+                            href={newsUrl}
+                            className="flex items-center gap-2"
+                        >
+                            More
+                            <IoIosMore className="w-5 h-5 sm:w-6 sm:h-6" />
                         </Link>
                     </Button>
-                    </div>
+                </div>
             </CardContent>
         </Card>
     )
 }
 
-export default NewsCard
+export default AnnouncementCard

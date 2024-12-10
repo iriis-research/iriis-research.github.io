@@ -1,0 +1,15 @@
+{
+    "id": "coling-2025-paper",
+    "title": "First paper accepted at CHiPSAL Workshop (COLING 2025)",
+    "intro": "We are thrilled to announce that our paper, 'Development of Pre-Trained Transformer-based Models for the Nepali Language,' has been accepted at @COLING2025! ",
+    "author": "IRIIS",
+    "date": "12/04/2024",
+    "image": "/news/iriis-launch/iriis-first.jpg",
+    "content": [
+      {
+        "heading": "More Info at:",
+        "body": "<a href='https://iriis-research.github.io/research/nepali-language-models/' style='text-decoration: underline;'>Development of Pre-trained transformer-based Models for Nepali Language</a>"
+       }
+    ]
+  }
+  

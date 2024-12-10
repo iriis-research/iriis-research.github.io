@@ -1,9 +1,8 @@
-// app/news/[id]/page.tsx
 import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode, Key } from 'react';
 import { Metadata } from 'next';
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode, Key } from 'react';
 
 interface ArticleContent {
   heading: string;
@@ -20,7 +19,6 @@ interface Article {
   description?: string;
 }
 
-
 // Function to fetch a specific article by its ID
 function getArticleById(id: string) {
   const filePath = path.join(process.cwd(), 'app/content/news-data', `${id}.json`);
@@ -31,16 +29,13 @@ function getArticleById(id: string) {
   return JSON.parse(fileContents);
 }
 
-
-
-
 // Generate metadata for each news article
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const article = getArticleById(params.id);
 
   if (!article) {
     return {
-      title: 'Article Not Found | IRIIS News'
+      title: 'Article Not Found | IRIIS News',
     };
   }
 
@@ -50,13 +45,6 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     authors: article.author ? [{ name: article.author }] : undefined,
   };
 }
-
-
-
-
-
-
-
 
 export default function ArticlePage({ params }: { params: { id: string } }) {
   const article = getArticleById(params.id);
@@ -68,19 +56,24 @@ export default function ArticlePage({ params }: { params: { id: string } }) {
 
   return (
     <div className="container mx-auto px-6 py-12">
-      <h1 className="text-5xl font-bold tracking-tighter sm:text-5xl md:text-5xl pt-64 pb-6">{article.title}</h1>
+      <h1 className="text-5xl font-bold tracking-tighter sm:text-5xl md:text-5xl pt-64 pb-6">
+        {article.title}
+      </h1>
       <section className="mb-12">
-        <p className="text-2xl mt-6">
-          {article.intro}
-        </p>
+        <p className="text-2xl mt-6">{article.intro}</p>
 
-            {article.content.map((topic: { heading: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined; body: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined; }, index: Key | null | undefined) => (
-            <section key={index}>
-                <h2 className="text-4xl font-bold tracking-tighter sm:text-4xl md:text-4xl pt-12 pb-6">{topic.heading}</h2>
-                <p className='text-2xl'>{topic.body}</p>
-                <div className='pb-36'></div>
-            </section>
-            ))}
+        {article.content.map((topic: { heading: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined; body: any; }, index: Key | null | undefined | any) => (
+          <section key={index}>
+            <h2 className="text-4xl font-bold tracking-tighter sm:text-4xl md:text-4xl pt-12 pb-6">
+              {topic.heading}
+            </h2>
+            <div
+              className="text-2xl"
+              dangerouslySetInnerHTML={{ __html: topic.body }} // Render HTML
+            ></div>
+            <div className="pb-36"></div>
+          </section>
+        ))}
       </section>
     </div>
   );
