@@ -132,7 +132,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         </p>
       </div>
       <div
-        className="prose max-w-5xl prose-2xl dark:prose-invert"
+        className="prose max-w-5xl prose-lg lg:prose-2xl md:prose-xl dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: htmlContent }}
       />
       <div className='pt-24'>
