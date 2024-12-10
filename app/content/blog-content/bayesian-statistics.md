@@ -49,7 +49,7 @@ url: blog/bayesian-statistics
 </script>
 
 
-**<span style="text-decoration:underline; font-size: 48px">Introduction</span>**
+### Introduction
 
 Before diving into the bayesian concept, let's first understand what does it mean when something has some probability of occurring??<br>
 
@@ -75,7 +75,7 @@ Let’s look at an example on how the bayesian approach can be subjective and tr
 In the example above, all persons A, B & C are correct about the disease. It’s just they predicted based on the knowledge and the prior information available to them. But, A  cannot say that the probability is 90% with just the information he has. The probability only gets updated after we add more and more information. The degree of belief helps form the probabilistic base of everything.
 
 
-**<span style="text-decoration:underline; font-size: 48px">Conditional Probability</span>**
+### Conditional Probability
 
 In order to get complete intuition behind the bayesian statistics, we need to understand conditional probability. Let’s say that event A and event B are related to each other. Conditional Probability is the probability of a certain outcome from event B, given that event A has already happened. Conditional probability can be expressed mathematically in following way:
 <br>

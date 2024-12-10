@@ -152,7 +152,7 @@ Below is a linearly dependent vector. It does not matter how much we try to scal
 [![ev](/blog-posts/eigen/vector_11.png)](javascript:void(0);)
 <br>
 
-**<span style="text-decoration:underline; font-size: 24px">Linear Transformation</span>**
+#### Linear Transformation
 
 Linear Transformation is a mapping between two vector spaces that respects vector addition and scalar multiplication. They are ways to move around space such that the grids between each unit remain parallel and evenly spaced among both axes.
 <br>
@@ -184,7 +184,7 @@ So, matrix is just a way to package the basis transformation. Let’s say we hav
 After transforming the basis, we are now able to transform the original vector. We now know about transformation and can transform vectors easily but what about the scale of transformation? By what factor was the area of the original vector increased or decreased? To understand this, let’s dive into the concept of determinants.
 
 
-**<span style="text-decoration:underline; font-size: 24px">Determinants</span>**
+#### Determinants
 
 Determinant inherently possess no meaning but it can have different meanings based on different conditions. Let’s start with a simple example:
 
@@ -250,7 +250,7 @@ Let’s transform 4 different points that make a square and compare change in ar
 In the examples above, we can see that the scale of transformation of the area enclosed by the original points to the area enclosed by transformed points is equal to the scale of transformation of the area enclosed by the original basis to the area enclosed by the transformed basis. And the determinant of the transformation matrix is the scale by which the original vector changes after transformation. So, Determinant can be looked as both area covered by the transformation matrix and the scale by which a transformation scales area enclosed by vectors. Now, let's move in to concept of Eigenvalue and Eigenvectors.
 
 
-**<span style="text-decoration:underline; font-size: 24px">Eigenvectors</span>**
+#### Eigenvectors
 
 In order to understand eigenvectors, consider a linear transform which moves î to (2, 1) and ĵ to (1, 2) and try out some examples.
 
