@@ -26,7 +26,7 @@ const ResearchAreaPage = () => {
         <div className="flex flex-col items-center">
           <h2 className="text-3xl font-semibold mb-4">Multimodal AI</h2>
           <p className=" max-w-2xl mx-auto text-center text-lg md:text-2xl lg:text-2xl">
-          Our NLP research focuses on advancing AI for low-resource languages by developing models that can perform well with limited data. We also explore in-context learning, enabling models to adapt to new tasks without retraining. Additionally, we investigate causality in language models, helping models better understand and generate language based on cause-and-effect relationships.
+          Our research in Multimodal AI focuses on integrating diverse data modalities, such as text, images, and video. A key area of interest is addressing the representation and alignment problem in multimodal/multisensory AI, ensuring that information from different modalities is effectively represented and aligned to achieve seamless understanding and decision-making across inputs.
           </p>
         </div>
 
