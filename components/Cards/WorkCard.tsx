@@ -31,38 +31,101 @@ function WorkCard({
     infoUrl 
 }: WorkCardProps) {
     return (
-        <Card className="max-w-screen-2xl max-h-screen-2xl overflow-hidden bg-gradient-to-r  hover:shadow-heavy hover:border-foreground cursor-pointer">
-            <CardHeader>
-                <CardTitle className="text-4xl font-bold text-center">{title}</CardTitle>
+        <Card className="
+            w-full 
+            max-w-full 
+            overflow-hidden 
+            bg-gradient-to-r 
+            hover:shadow-heavy
+            transition-all 
+            duration-500 
+            ease-in-out 
+            hover:border-foreground
+        ">
+            <CardHeader className="pb-0">
+                <CardTitle className="
+                    text-2xl sm:text-3xl md:text-4xl 
+                    font-bold 
+                    text-center 
+                    tracking-tight 
+                    line-clamp-2
+                ">
+                    {title}
+                </CardTitle>
             </CardHeader>
             
-            <CardContent className="space-y-4">
-                <div className=" border-solid border-2 relative w-full h-96 overflow-hidden rounded-md group bg-background/50 border-foreground shadow-md hover:shadow-heavy">
+            <CardContent className="space-y-4 p-4 sm:p-6">
+                <div className="
+                    relative 
+                    w-full 
+                    h-48 sm:h-64 md:h-80 
+                    overflow-hidden 
+                    rounded-md 
+                    group 
+                    border 
+                    border-foreground/10 
+                    shadow-sm 
+                    hover:shadow-md 
+                    transition-all 
+                    duration-300
+                ">
                     <Image 
                         src={imageUrl}
                         alt={title}
                         fill
-                        className="object-cover transform group-hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="
+                            object-cover 
+                            transform 
+                            group-hover:scale-105 
+                            transition-transform 
+                            duration-300 
+                            ease-in-out
+                        "
+                        placeholder="blur"
                     />
                 </div>
-                <CardDescription className="text-2xl text-bold">
+                <CardDescription className="
+                    text-base sm:text-lg md:text-xl 
+                    text-foreground 
+                    line-clamp-4
+                ">
                     {description}
                 </CardDescription>
             </CardContent>
 
-            <CardFooter className="flex justify-between gap-4">
+            <CardFooter className="
+                flex 
+                flex-col sm:flex-row 
+                gap-3 sm:gap-4 
+                p-4 sm:p-6 
+                pt-0
+            ">
                 {demoUrl && (
                     <Button 
                         variant="outline" 
-                        className="flex-1 border-solid border-2 border-foreground"
-                        size='lg'
+                        className="
+                            w-full 
+                            flex 
+                            items-center 
+                            justify-center 
+                            gap-2 
+                            border-solid
+                            border-2
+                            hover:border-foreground
+                            hover:bg-accent 
+                            text-sm sm:text-base
+                        "
                         asChild
                     >
-                        <Link href={demoUrl} target='_blank' rel='noopener noreferrer'>
-                            <span className="flex items-center gap-2 text-xl">
-                                <RiGitRepositoryLine size={36} />
-                                Repo
-                            </span>
+                        <Link 
+                            href={demoUrl} 
+                            target='_blank' 
+                            rel='noopener noreferrer'
+                            className="flex items-center gap-2"
+                        >
+                            <RiGitRepositoryLine className="w-5 h-5 sm:w-6 sm:h-6" />
+                            Repo
                         </Link>
                     </Button>
                 )}
@@ -70,15 +133,25 @@ function WorkCard({
                 {infoUrl && (
                     <Button 
                         variant="outline" 
-                        className="flex-1 border-solid border-2 border-foreground"
-                        size = 'lg'
+                        className="
+                            w-full 
+                            flex 
+                            items-center 
+                            justify-center 
+                            border-solid
+                            border-2
+                            hover:border-foreground
+                            gap-2 
+                            text-sm sm:text-base
+                        "
                         asChild
                     >
-                        <Link href={infoUrl}>
-                            <span className="flex items-center gap-2 text-xl">
-                                <FaInfoCircle size={36} />
-                                Info
-                            </span>
+                        <Link 
+                            href={infoUrl}
+                            className="flex items-center gap-2"
+                        >
+                            <FaInfoCircle className="w-5 h-5 sm:w-6 sm:h-6" />
+                            Info
                         </Link>
                     </Button>
                 )}

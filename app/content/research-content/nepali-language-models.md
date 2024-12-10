@@ -1,11 +1,11 @@
 ---
 title: Development of Pre-trained transformer-based Models for Nepali Language
-description: Under Review    
+description: The 31st International Conference on Computational Linguistics (COLING 2025)  
 slug: nepali-language-models
-date: 11/29/2024
+date: N/A
 author: IRIIS
 image: /first_image.png
-url: /research/nepali-language-models
+url: https://arxiv.org/pdf/2411.15734
 ---
 
 
@@ -17,12 +17,16 @@ Transformer-based pre-trained language models have dominated the field of Natura
 
 Please consider citing our work if you utilize any of our resources or results. Your acknowledgment would be greatly appreciated. Thank You!
 
-```bash
-
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Coming Soon xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
+```text
+@misc{thapa2024,
+      title={Development of Pre-Trained Transformer-based Models for the Nepali Language}, 
+      author={Prajwal Thapa and Jinu Nyachhyon and Mridul Sharma and Bal Krishna Bal},
+      year={2024},
+      eprint={2411.15734},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2411.15734}, 
+}
 ```
 
 ### Paper
