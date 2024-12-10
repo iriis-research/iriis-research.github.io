@@ -127,7 +127,6 @@ export default function HomePage() {
                          classification, similarity and paraphrase tasks, and Natural Language Inference (NLI) tasks. On evaluating the models 
                          using added tasks, we observe that the existing models fall short in handling complex NLU tasks effectively. "
               imageUrl={SecondImage}
-              demoUrl="https://arxiv.org/abs/2411.19244"
               infoUrl="/research/nepali-language-benchmark"
             />
           </div>
@@ -138,7 +137,6 @@ export default function HomePage() {
               title="Nepali Language Models"
               description="Pre-trained language models (BERT, RoBERTa, and GPT-2) for the Nepali language. These models are developed to enhance language understanding and generation, enabling advanced NLP applications and encouraging further research in low-resource languages."
               imageUrl={FirstImage}
-              demoUrl="https://huggingface.co/collections/IRIISNEPAL/nepali-language-models-6729fc7a5cd58b3f40f47708"
               infoUrl="/research/nepali-language-models"
             />
           </div>
