@@ -62,10 +62,10 @@ export default function NewsCard({
           group 
           bg-background 
           border 
-          border-foreground/20 
-          hover:border-foreground/40 
+          border-foreground/50
+          hover:border-foreground 
           cursor-pointer 
-          hover:shadow-lg 
+          hover:shadow-heavy 
           transition-all 
           duration-300
         "

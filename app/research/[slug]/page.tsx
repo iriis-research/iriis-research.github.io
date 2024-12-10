@@ -130,7 +130,7 @@ export default async function ResearchPost({ params }: { params: { slug: string 
         </p>
       </div>
       <div
-        className="prose max-w-5xl prose-xl dark:prose-invert"
+        className="prose max-w-5xl md:prose-xl sm:prose-lg prose-lg dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: htmlContent }}
       ></div>
       <div className='pt-8 flex items-center justify-center pb-16'>

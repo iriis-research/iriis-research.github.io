@@ -56,21 +56,29 @@ export default function ArticlePage({ params }: { params: { id: string } }) {
 
   return (
     <div className="container mx-auto px-6 py-12">
-      <h1 className="text-5xl font-bold tracking-tighter sm:text-5xl md:text-5xl pt-64 pb-6">
+      {/* Title */}
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter pt-64 pb-6">
         {article.title}
       </h1>
-      <section className="mb-12">
-        <p className="text-2xl mt-6">{article.intro}</p>
 
-        {article.content.map((topic: { heading: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined; body: any; }, index: Key | null | undefined | any) => (
+      {/* Intro */}
+      <section className="mb-12">
+        <p className="text-lg sm:text-xl md:text-2xl mt-6">{article.intro}</p>
+
+        {/* Content */}
+        {article.content.map((topic: { heading: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined; body: any; }, index: Key | null | undefined| any) => (
           <section key={index}>
-            <h2 className="text-4xl font-bold tracking-tighter sm:text-4xl md:text-4xl pt-12 pb-6">
+            {/* Heading */}
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter pt-12 pb-6">
               {topic.heading}
             </h2>
+
+            {/* Body */}
             <div
-              className="text-2xl"
+              className="text-base sm:text-lg md:text-xl"
               dangerouslySetInnerHTML={{ __html: topic.body }} // Render HTML
             ></div>
+
             <div className="pb-36"></div>
           </section>
         ))}

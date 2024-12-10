@@ -60,7 +60,7 @@ export default function Research() {
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center gap-24 pb-16">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 justify-center gap-24 pb-16">
           {BlogPosts.map((post, index) => (
             <BlogCard key={post.slug} {...post} />
           ))}

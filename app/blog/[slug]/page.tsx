@@ -1,3 +1,4 @@
+// app/blog/[slug]/page.tsx
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -48,7 +49,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   if (!fs.existsSync(filepath)) {
     return {
-      title: 'Research Not Found | IRIIS'
+      title: 'Blog Not Found | IRIIS'
     };
   }
 
