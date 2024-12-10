@@ -15,14 +15,20 @@ import rehypeSlug from 'rehype-slug';
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { Metadata } from 'next';
-
+import { GiArchiveResearch } from "react-icons/gi";
+import { RiGitRepositoryLine } from "react-icons/ri";
+import { FaDatabase } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 
 interface Frontmatter {
   title: string;
   description: string;
   author: string;
   date: string;
-  url: string;
+  paperurl: string;
+  modelurl?: string;
+  dataurl?: string;
+  codeurl?: string;
 }
 
 
@@ -133,18 +139,61 @@ export default async function ResearchPost({ params }: { params: { slug: string 
         className="prose max-w-5xl md:prose-xl sm:prose-lg prose-lg dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: htmlContent }}
       ></div>
-      <div className='pt-8 flex items-center justify-center pb-16'>
-      <Button 
-          variant="outline" 
-          className="flex border-foreground border-solid border-4 text-center"
-          size='lg'
-          asChild
-        >
-          <Link href={frontmatter.url} className="text-xl flex items-center" target='_blank' rel='noopener noreferrer'>
-            View Paper
-          </Link>
-        </Button>
-      </div>
+      <div className='grid grid-cols-1 gap-4 pt-8 pb-16 justify-center items-center lg:ml-40 lg:mr-40 md:ml-32 md:mr-32'>
+        <Button 
+            variant="outline" 
+            className="border-foreground border-solid border-2 hover:border-4 justify-center text-center mr-4 ml-4 hover:shadow-heavy"
+            size='lg'
+            asChild
+          >
+            <Link href={frontmatter.paperurl} className="text-xl flex items-center" target='_blank' rel='noopener noreferrer'>
+            <GiArchiveResearch />
+              Paper
+            </Link>
+          </Button>
+
+          {frontmatter.codeurl && (
+              <Button 
+                variant="outline" 
+                className="flex border-foreground border-solid border-2 hover:border-4 text-center mr-4 ml-4 hover:shadow-heavy"
+                size='lg'
+                asChild
+              >
+                <Link href={frontmatter.codeurl} className="text-xl flex items-center" target='_blank' rel='noopener noreferrer'>
+                <FaGithub />
+                  Code
+                </Link>
+              </Button>
+            )}
+
+          {frontmatter.modelurl && (
+              <Button 
+                variant="outline" 
+                className="flex border-foreground border-solid border-2 hover:border-4 text-center mr-4 ml-4 hover:shadow-heavy"
+                size='lg'
+                asChild
+              >
+                <Link href={frontmatter.modelurl} className="text-xl flex items-center" target='_blank' rel='noopener noreferrer'>
+                  <RiGitRepositoryLine />
+                  Model
+                </Link>
+              </Button>
+            )}
+        
+        {frontmatter.dataurl && (
+            <Button 
+              variant="outline" 
+              className="flex border-foreground border-solid border-2 hover:border-4 text-center mr-4 ml-4 hover:shadow-heavy"
+              size='lg'
+              asChild
+            >
+              <Link href={frontmatter.dataurl} className="text-xl flex items-center" target='_blank' rel='noopener noreferrer'>
+                <FaDatabase />
+                Data
+              </Link>
+            </Button>
+          )}
+        </div>
       
     </div>
   );

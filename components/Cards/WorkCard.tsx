@@ -11,7 +11,6 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { FaInfoCircle } from "react-icons/fa";
-import { RiGitRepositoryLine } from "react-icons/ri";
 import { Button } from "@/components/ui/button" 
 
 // Define the props interface
@@ -19,15 +18,13 @@ interface WorkCardProps {
     title: string;
     description: string;
     imageUrl: StaticImageData;
-    demoUrl?: string;
     infoUrl?: string;
 }
 
 function WorkCard({ 
     title, 
     description, 
-    imageUrl, 
-    demoUrl, 
+    imageUrl,  
     infoUrl 
 }: WorkCardProps) {
     return (
@@ -101,34 +98,6 @@ function WorkCard({
                 p-4 sm:p-6 
                 pt-0
             ">
-                {demoUrl && (
-                    <Button 
-                        variant="outline" 
-                        className="
-                            w-full 
-                            flex 
-                            items-center 
-                            justify-center 
-                            gap-2 
-                            border-solid
-                            border-2
-                            hover:border-foreground
-                            hover:bg-accent 
-                            text-sm sm:text-base
-                        "
-                        asChild
-                    >
-                        <Link 
-                            href={demoUrl} 
-                            target='_blank' 
-                            rel='noopener noreferrer'
-                            className="flex items-center gap-2"
-                        >
-                            <RiGitRepositoryLine className="w-5 h-5 sm:w-6 sm:h-6" />
-                            Repo
-                        </Link>
-                    </Button>
-                )}
                 
                 {infoUrl && (
                     <Button 

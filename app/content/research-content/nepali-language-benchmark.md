@@ -5,7 +5,7 @@ slug: nepali-language-benchmark
 date: N/A
 author: IRIIS
 image: /first_image.png
-url: https://arxiv.org/pdf/2411.19244
+paperurl: https://arxiv.org/pdf/2411.19244
 ---
 
 
@@ -40,5 +40,4 @@ Please consider citing our work if you utilize any of our resources or results. 
 }
 ```
 
-### Paper
-Click below for the paper:
+### More

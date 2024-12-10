@@ -5,7 +5,9 @@ slug: nepali-language-models
 date: N/A
 author: IRIIS
 image: /first_image.png
-url: https://arxiv.org/pdf/2411.15734
+paperurl: https://arxiv.org/pdf/2411.15734
+modelurl: https://huggingface.co/collections/IRIISNEPAL/nepali-language-models-6729fc7a5cd58b3f40f47708
+dataurl: https://huggingface.co/collections/IRIISNEPAL/nepali-language-corpus-672a6a840b935d15bb2b2eaf
 ---
 
 
@@ -29,5 +31,4 @@ Please consider citing our work if you utilize any of our resources or results. 
 }
 ```
 
-### Paper
-Click below for the paper:
+### More
